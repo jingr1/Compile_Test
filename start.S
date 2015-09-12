@@ -43,7 +43,8 @@ clean_done:
 
 /*初始化栈,将8K的SRAM映射到0地址处*/
 ldr sp, =8*1024
-bl main
+ldr pc, =main /*重定位之后要使用位置相关码跳转*/
+/*bl main*/
 
 halt:
 b halt
