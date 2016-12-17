@@ -1,6 +1,6 @@
-DIR_OBJ = products
-DIR_SRC = source
-DIR_BUILD = build
+DIR_OBJ = ../products
+DIR_SRC = ../source
+DIR_BUILD = .
 OBJCOPY=arm-none-eabi-objcopy
 OBJDUMP=arm-none-eabi-objdump
 GCC=arm-none-eabi-gcc

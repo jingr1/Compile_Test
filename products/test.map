@@ -10,24 +10,24 @@ Linker script and memory map
                 0x50000000                . = ALIGN (0x4)
 
 .text           0x50000000      0x208
- products/start.o()
- .text          0x50000000       0x7c products/start.o
+ ../products/start.o()
+ .text          0x50000000       0x7c ../products/start.o
                 0x50000000                _start
- .data          0x5000007c        0x0 products/start.o
- .bss           0x5000007c        0x0 products/start.o
- .debug_line    0x5000007c       0x60 products/start.o
- .debug_info    0x500000dc       0x4e products/start.o
- .debug_abbrev  0x5000012a       0x14 products/start.o
+ .data          0x5000007c        0x0 ../products/start.o
+ .bss           0x5000007c        0x0 ../products/start.o
+ .debug_line    0x5000007c       0x60 ../products/start.o
+ .debug_info    0x500000dc       0x4e ../products/start.o
+ .debug_abbrev  0x5000012a       0x14 ../products/start.o
  *fill*         0x5000013e        0x2 
  .debug_aranges
-                0x50000140       0x20 products/start.o
+                0x50000140       0x20 ../products/start.o
  .ARM.attributes
-                0x50000160       0x14 products/start.o
- .iplt          0x50000174        0x0 products/start.o
- .rel.iplt      0x50000174        0x0 products/start.o
- .igot.plt      0x50000174        0x0 products/start.o
+                0x50000160       0x14 ../products/start.o
+ .iplt          0x50000174        0x0 ../products/start.o
+ .rel.iplt      0x50000174        0x0 ../products/start.o
+ .igot.plt      0x50000174        0x0 ../products/start.o
  *(.text)
- .text          0x50000174       0x94 products/main.o
+ .text          0x50000174       0x94 ../products/main.o
                 0x50000174                main
 
 .glue_7         0x50000208        0x0
@@ -44,42 +44,42 @@ Linker script and memory map
 
 .data           0x50000208        0x4
  *(.data)
- .data          0x50000208        0x4 products/main.o
+ .data          0x50000208        0x4 ../products/main.o
                 0x5000020c                bss_start = .
 
 .bss            0x5000020c        0x0
  *(.bss)
- .bss           0x5000020c        0x0 products/main.o
+ .bss           0x5000020c        0x0 ../products/main.o
                 0x5000020c                bss_end = .
-LOAD products/main.o
-LOAD products/start.o
+LOAD ../products/main.o
+LOAD ../products/start.o
 LOAD D:\cygwin64\lib\libc.a
-OUTPUT(products/test.elf elf32-littlearm)
+OUTPUT(../products/test.elf elf32-littlearm)
 
 .debug_info     0x00000000       0x58
- .debug_info    0x00000000       0x58 products/main.o
+ .debug_info    0x00000000       0x58 ../products/main.o
 
 .debug_abbrev   0x00000000       0x48
- .debug_abbrev  0x00000000       0x48 products/main.o
+ .debug_abbrev  0x00000000       0x48 ../products/main.o
 
 .debug_aranges  0x00000000       0x20
  .debug_aranges
-                0x00000000       0x20 products/main.o
+                0x00000000       0x20 ../products/main.o
 
 .debug_line     0x00000000       0x46
- .debug_line    0x00000000       0x46 products/main.o
+ .debug_line    0x00000000       0x46 ../products/main.o
 
 .debug_str      0x00000000       0x7b
- .debug_str     0x00000000       0x7b products/main.o
+ .debug_str     0x00000000       0x7b ../products/main.o
 
 .comment        0x00000000       0x6e
- .comment       0x00000000       0x6e products/main.o
+ .comment       0x00000000       0x6e ../products/main.o
                                  0x6f (size before relaxing)
 
 .ARM.attributes
                 0x00000000       0x2c
  .ARM.attributes
-                0x00000000       0x30 products/main.o
+                0x00000000       0x30 ../products/main.o
 
 .debug_frame    0x00000000       0x28
- .debug_frame   0x00000000       0x28 products/main.o
+ .debug_frame   0x00000000       0x28 ../products/main.o
