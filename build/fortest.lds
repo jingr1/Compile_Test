@@ -4,7 +4,7 @@ SECTIONS
 	. = 0x50000000;  /*链接地址:程序的运行地址*/
 	. = ALIGN(4);
 	.text : {
-		start.o
+		products/start.o
 		* (.text)   /*所有文件的代码段*/
 	}
     		
